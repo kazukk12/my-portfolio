@@ -1,23 +1,9 @@
-type Project = {
-  title : string;
-  description : string;
-  link : string;
-}
-
-const projects: Project[] = [
-  {
-    title: 'フーディー！',
-    description: '位置情報×レビュアーの飲食店推薦アプリ',
-    link: 'https://github.com/your-name/foodie',
-  },
-  {
-    title: 'Voppy',
-    description: '音声版Twitter風の会話SNSアプリ',
-    link: 'https://github.com/your-name/voppy',
-  },
-];
+// src/app/projects/page.tsx
+import { getProjects } from '@/lib/getProjects';
 
 export default function ProjectsPage() {
+  const projects = getProjects(); // Markdownから取得！
+
   return (
     <div className="py-12">
       <h1 className="text-3xl font-bold mb-8 text-center">プロジェクト一覧</h1>
